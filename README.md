@@ -6,7 +6,7 @@ Preference-based decisions, like choosing what to eat, often depend on associati
 1. to investigate a new application of modeling knowledge representations as networks to quantify relations, between groups of options within preferential decision-making </br>
 2. to examine how the structure of knowledge representations of preferences produces behavioral phenomena like choice, response times, and similarity judgements </br>
 
-<!-- <img src="nma.png" alt="neurocognitive mediation" title="Neurocognitive Mediation Analysis"> -->
+<img src="food_network_icon.png" alt="food association network" title="knowledge representation of liking preferences">
 
 <b>Keywords</b>: decision making, centrality, network analysis, knowledge representations
 
