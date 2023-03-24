@@ -4,7 +4,7 @@
 Preference-based decisions, like choosing what to eat, often depend on associations between the options. For example, when selecting a fruit basket for the holidays, the relations between fruits contribute to the overall attractiveness of a basket. However, quantifying the relations between options is a non-trivial task. Ideally, the relations between options should relate to how they’re organized in a person’s memory. In this poster, I introduce a novel approach that utilizes semantic network modeling to quantify relations between groups of food options. By extracting descriptive measures of network organization, I showcase how the structure of knowledge representations of preferences can produce behavioral phenomena like choice, response times, and similarity judgments. In this study our goals are </br>
 
 1. to investigate a new application of modeling knowledge representations as networks to quantify relations, between groups of options within preferential decision-making </br>
-2. to examine how the structure of knowledge representations of preferences produces behavioral phenomena like choice, response times, and similarity judgements </br>
+2. to examine how the structure of knowledge representations of preferences produces behavioral phenomena like choice, response times, and similarity judgments </br>
 
 <img src="food_network_icon.png" alt="food association network" title="knowledge representation of liking preferences">
 
@@ -13,13 +13,12 @@ Preference-based decisions, like choosing what to eat, often depend on associati
 <h2>Background</h2>
 <details>
   <summary>Definitions</summary>
-  
-  **Knowledge representations**</br>
- 
+   
   **Centrality**</br>
+    By constructing a network representation, we are developing a measurement instrument to subsequently investigate its structure. Network modeling approaches allows us to examine different properties of nodes and edges, most commonly focusing on quantifying the “importance” of a node in the graph representation via centrality measures (Borgatti, 2005). That is, the centrality of nodes within a network can be used to inspect the structural importance of different nodes. Prior work suggests that network structure explains a range of behavioral phenomena like language processing (Vitevitch et al., 2014) and creative problem solving (Kenett et al., 2014), as well as in clinical settings like autism spectrum disorder (Kenett et al., 2016) and major depressive disorder (Boschloo et al., 2016). Node centrality, in particular, has been shown to influence decision-making (Dalege, Borsboom, van Harreveld, Waldorp, & van der Maas, 2017).
 
   **Subgraph**</br>
-
+    We also interested in characterizing how sets of food items are related to one another. Thus, we need to select groups of food items from our larger food association network. More specifically in graph theory terms we are creating induced subgraphs of our association network. Let's say we have a graph $G=(V,E)$, where $V$ is the set of nodes, and $E$ denotes the edges between them. An induced subgraph of $G$ is any graph $S=(V^{*},E^{*})$ such that $V^{*} \subseteq V$ $V$ and $E^{*} \subseteq E$ that also satisfies the additional constraint that the subgraph of $G$ induced by $S$ is a graph that has $S$ as its set of nodes and all the edges of $G$ that have both endpoints in $S$. In words, we are creating sets of induced subgraphs that are formed from a subset of the food items of the food association network while retaining and all of the edges connecting pairs of food items in that subset.
 </details>
 
 <h2>Tasks Description</h2>
@@ -40,13 +39,72 @@ Preference-based decisions, like choosing what to eat, often depend on associati
 </details>
 
 <h2>Association Network Construction</h2>
-We conducted a EGA.</br>
+    Because we required an association network to create the experimental stimuli, we estimated a network from previously collected rating data from Lee & Holyoak, 2021. Using the rating data from our analysis of Lee & Holyoak, we: estimated an association network, removed spurious connections using model selection procedures, and partitioned the graph into clusters. Then using the estimated network structure, we extracted subgraphs of items with different network organization to create our stimulus set. All network measures in this study used the Lee & Holyoak network to compute relevant statistics (e.g., degree, or edge density). 
+
+    We implemented the Network Estimation Method and Community Detection Algorithm above by conducting Exploratory graph analysis (EGA), a recently developed method to estimate the number of communities in multivariate data using undirected network models (Golino & Epskamp, 2017; Golino et al., 2020). EGA first applies a network estimation method (in our case EBICglasso) followed by a community detection algorithm for weighted networks (in our case, the Walktrap algorithm). EGA has been shown to be as accurate or more accurate than more traditional factor analytic methods (Christensen, Garrido, & Golino, 2021; Golino et al., 2020; Merritt & Christensen, 2022).</br>
 <details>
   <summary>Principal component analysis (PCA)</summary>
+    While a range of possible centrality measures is available, people likely do not track or utilize any exact measure of centrality per se but rather the variances reflected by centralities. Furthermore, as the number of centrality measures increases, interpreting each measure in isolation becomes challenging due to issues of multicollinearity and dimensionality. Principal component analysis (PCA) is a statistical technique that can help us understand the importance of any given node rather than relying solely on any single measure of centrality.
+    
+	PCA linearly transforms input data into an equal number of linearly uncorrelated variables called Principal Components (PCs) that cumulatively account for an additional portion of the remaining data variance (Kambhatla et al., 1997). To reduce the dimensionality of the data, we consider the minimum set of largest PCs, i.e., the principal subspace, that accounts for at least some pre-defined variance threshold (usually in the range of 80%-95% of original data variance) for further analyses.
+
+    In our case, by transforming the data into a lower dimensional space, we can facilitate capturing higher-order notions of node importance. Thus, we conducted a PCA to decompose variances in the node metrics into components aligned with network measures.
+    As PC 1 and PC 2 jointly account for more than 80% of the total variances in node parameters under consideration, the PCs act as our network statistic scores for our behavioral analysis. Using the PC scores, we assigned each food item two node importance scores and assessed the effect of node importance by PC 1 and 2 alone or by PCs 1 and 2 combined.
 </details>
 
+<h2>Regression Tables</h2>
+Here are the corresponding regression tables for each of the figures on the poster.</br>
 <details>
-  <summary>Model Specification</summary>
+    <summary>Table one</summary>
+    <style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0lax">&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;</th>
+    <th class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;color:white">Experiment one</span>&nbsp;&nbsp;&nbsp;</th>
+    <th class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;color:white">Experiment two</span>&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">left&nbsp;&nbsp;&nbsp;liking rating</span>&nbsp;&nbsp;&nbsp;</td>
+    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">0.90***&nbsp;&nbsp;&nbsp;[0.69, 1.11]</span>&nbsp;&nbsp;&nbsp;</td>
+    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">0.79***&nbsp;&nbsp;&nbsp;[0.68, 0.91]</span>&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">right&nbsp;&nbsp;&nbsp;liking rating</span>&nbsp;&nbsp;&nbsp;</td>
+    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">−0.75***&nbsp;&nbsp;&nbsp;[−0.96, −0.55]</span>&nbsp;&nbsp;&nbsp;</td>
+    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">−0.81***&nbsp;&nbsp;&nbsp;[−0.93, −0.70]</span>&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">left&nbsp;&nbsp;&nbsp;network estimate</span>&nbsp;&nbsp;&nbsp;</td>
+    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">0.16**&nbsp;&nbsp;&nbsp;[0.05, 0.26]</span>&nbsp;&nbsp;&nbsp;</td>
+    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">0.11**&nbsp;&nbsp;&nbsp;[0.04, 0.18]</span>&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">right&nbsp;&nbsp;&nbsp;network estimate</span>&nbsp;&nbsp;&nbsp;</td>
+    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">−0.23***&nbsp;&nbsp;&nbsp;[−0.33, −0.13]</span>&nbsp;&nbsp;&nbsp;</td>
+    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">−0.10**&nbsp;&nbsp;&nbsp;[−0.17, −0.03]</span>&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">left&nbsp;&nbsp;&nbsp;rating × network estimate</span>&nbsp;&nbsp;&nbsp;</td>
+    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">0.12*&nbsp;&nbsp;&nbsp;[0.01, 0.23]</span>&nbsp;&nbsp;&nbsp;</td>
+    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">−0.06+&nbsp;&nbsp;&nbsp;[−0.13, 0.01]</span>&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">right&nbsp;&nbsp;&nbsp;rating × network estimate</span>&nbsp;&nbsp;&nbsp;</td>
+    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">0.00&nbsp;&nbsp;&nbsp;[−0.11, 0.10]</span>&nbsp;&nbsp;&nbsp;</td>
+    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">0.04&nbsp;&nbsp;&nbsp;[−0.03, 0.11]</span>&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</tbody>
+</table>
 </details>
 
 <h2>References</h2>
