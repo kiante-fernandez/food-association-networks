@@ -60,10 +60,10 @@ Preference-based decisions, like choosing what to eat, often depend on associati
 </details>
 
 <h2>Regression Tables</h2>
-Here are the corresponding regression tables for each of the figures on the poster.</br>
+Here are the corresponding regression tables for each of the figures on the poster.</br></br>
 <details>
     <summary>Table one</summary>
-    <style type="text/css">
+<style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   overflow:hidden;padding:10px 5px;word-break:normal;}
