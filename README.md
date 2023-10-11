@@ -28,19 +28,22 @@ In our new studies, subjects chose repeatedly between two sets of six foods each
 </details>
 
 <h2>Tasks Description</h2>
+<p align="center">
+<img src="task.png" alt="experimental design" title="">
+</p>
 
 <details>
-    <summary>Exposure and Ratings</summary>
+    <summary>A. Exposure and Ratings</summary>
     Participants first passively observed images of 60 individual snack foods. Each food was presented for 750 ms. Then, for each individual snack food, participants were asked to rate how much they would like to eat this food right now. Participants used a mouse to rate their desire to consume each of the 60 snack foods on a scale. The scale appeared to participants to be continuous, and the data was captured in increments of 1 (ranging from 1 to 100). Participants were be told to make the rating on a scale from “Not at all” to a rating of “Very much!” indicating that they really would like to eat the food item right now. Participants were able to revise their rating as many times as they liked before finalizing it. Participants clicked the “continue” button to finalize their value rating response and proceed to the next screen. This process continued for all 60 items.
  </details>
 
  <details>
-    <summary>2AFC</summary>
+    <summary>B. 2AFC</summary>
    Participants completed a binary choice task using the generated sets of foods from the constructed food association network. In each trial, participants were presented with two sets, one on each side of the screen and were instructed to choose their preferred set that they would most prefer to eat. Participants used the F key to choose the set on the left side of the screen and the J key to choose the set on the right side of the screen. Participants were instructed to make selections at their own pace. Each trial was designed so that sets differed in centrality. In addition, no pair of sets was shown more than once. Each trial consisted of two sets from the set of 100 presented in random order. Participants completed a total of 99 and 100 trials in Experiments 1 and 2 & 3 respectively. 
 </details>
 
  <details>
-    <summary>Similarity judgments</summary>
+    <summary>C. Similarity judgments</summary>
     In Experiment 2 and 3, after preforming the rating and choice task, for each of the 100 previously shown sets, participants were asked to assess the preference similarity for each set. For each set, participants were asked to rate: if someone likes one of the foods, how likely is it that they also similarly like the other foods? Participants were told to make the rating on a scale from “Not at all likely” to “Very likely”. Participants used a mouse to rate each item on a scale. The scale appeared to be continuous, and the data was captured with integers ranging from 1 to 100.
 </details>
 
