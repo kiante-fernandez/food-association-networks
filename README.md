@@ -1,14 +1,18 @@
 <h1>Uncovering the Role of Structural Properties in Food Association Networks</h1>
-<em>Kianté Fernandez<sup>1</sup>, Uma R. Karmarkar<sup>3</sup>, Ian Krajbich<sup>1,2</sup></em></br>1 Department of Psychology, The Ohio State University; 2 Department of Economics, The Ohio State University; 3 Rady School of Management, University of California, San Diego </br> </br>
+<em>Kianté Fernandez<sup>1</sup>, Uma R. Karmarkar<sup>2</sup>, Ian Krajbich<sup>1</sup></em></br>1 Department of Psychology, University of California Los Angeles; 2 Rady School of Management, University of California, San Diego </br> </br>
 
-Preference-based decisions, like choosing what to eat, often depend on associations between the options. For example, when selecting a fruit basket for the holidays, the relations between fruits contribute to the overall attractiveness of a basket. However, quantifying the relations between options is a non-trivial task. Ideally, the relations between options should relate to how they’re organized in a person’s memory. In this poster, I introduce a novel approach that utilizes semantic network modeling to quantify relations between groups of food options. By extracting descriptive measures of network organization, I showcase how the structure of knowledge representations of preferences can produce behavioral phenomena like choice, response times, and similarity judgments. In this study our goals are </br>
+**Research Question**: How do people choose between menus of options, like when choosing which restaurant to dine in or which store to shop in? Such decisions involve comparing sets of items, whose value may relate to the cohesiveness of their options. A shop with similar items may be more appealing than one with dissimilar items. Thus, a major challenge in testing such questions is identifying similarity. Here, we define similarity as the degree to which items are associated with each other. We study the associations between items using network models, where relations between items (nodes) are represented as connections (edges). In these models, items that fit together are more closely and densely connected. Across two studies, we use network models to understand how individual items relate to each other and how those relations affect choices between sets. </br>
 
-1. to investigate a new application of modeling knowledge representations as networks to quantify relations, between groups of options within preferential decision-making </br>
-2. to examine how the structure of knowledge representations of preferences produces behavioral phenomena like choice, response times, and similarity judgments </br>
+**Methods**: To quantify relations between items, we estimated an association network using a study where subjects rated a variety of food items (N = 267; Lee & Holyoak, 2021). From this network, we extracted several measures of node importance and connectedness, to see how those features might affect choices between sets of those foods.  </br>
+In our new studies, subjects chose repeatedly between two sets of six foods each; the studies varied on whether subjects would receive all the items or only one item from a chosen set.  Subjects also provided liking ratings for each individual food; in the second study they also provided similarity judgments for the sets of foods.  </br>
 
-<img src="food_network_icon.png" alt="food association network" title="knowledge representation of liking preferences">
+**Results**: Our network analysis yielded seven communities, which clearly mapped onto distinct categories like fruit, chocolate, and chips. Within communities, foods that would have been predicted to be similar, like raspberries and blackberries, were indeed closely related. Building on this, across two studies (N = 30; N = 75), we found that network structure played a significant role in choosing between sets (Study 1: beta = 0.16, 95% HDI [0.05, 0.26], Study 2: beta = 0.11, 95% HDI [0.04, 0.18]). Controlling for individual items’ liking ratings, subjects were more likely to choose sets containing items with high node strength and clustering coefficient. Moreover, subjects’ similarity judgments in the second study correlated with the strength of connectivity between foods in the set (rho = 0.42, 95% HDI [0.25, 0.55]).</br>
 
-<b>Keywords</b>: decision making, centrality, network analysis, knowledge representations
+**Conclusions**: Unlike previous work deriving semantic memory representations from statistical regularities in text (Bhatia & Aka, 2022) or semantic fluency tasks (Zemla & Austerweil, 2018), we show that relational representations can be derived from preference data, and that they align well with subjective measures of similarity. Moreover, we demonstrate that these relations affect people’s choices between sets – people prefer sets with more well-connected items. Our work highlights the usefulness of network science in the study of preferences and provides a new tool for assessing how well sets of items fit together.</br>
+
+<img src="food_network_icon.png" alt="food association network" title="preference representation of liking preferences">
+
+<b>Keywords</b>: decision making, centrality, network analysis, preference representations
 
 <h2>Background</h2>
 <details>
@@ -30,12 +34,12 @@ Preference-based decisions, like choosing what to eat, often depend on associati
 
  <details>
     <summary>2AFC</summary>
-    Participants completed a binary choice task using the generated arrays of snack foods from the constructed food association network. In each trial, participants were presented with two arrays of food items, one array on each side of the screen, and were instructed to choose their preferred array of food items that they would most prefer to eat right now. Participants used the F key to choose the array of food items on the left side of the screen and the J key to choose the array of food items on the right side of the screen. Participants were instructed to make selections at their own pace. Each trial was designed so that the two arrays of food items differ in centrality. In addition, no pair of food item arrays were shown more than once. Each trial consisted of two arrays from the set of 100 presented in random order. Participants completed a total of 99 trials.
+   Participants completed a binary choice task using the generated sets of foods from the constructed food association network. In each trial, participants were presented with two sets, one on each side of the screen and were instructed to choose their preferred set that they would most prefer to eat. Participants used the F key to choose the set on the left side of the screen and the J key to choose the set on the right side of the screen. Participants were instructed to make selections at their own pace. Each trial was designed so that sets differed in centrality. In addition, no pair of sets was shown more than once. Each trial consisted of two sets from the set of 100 presented in random order. Participants completed a total of 99 and 100 trials in Experiments 1 and 2 & 3 respectively. 
 </details>
 
  <details>
     <summary>Similarity judgments</summary>
-    In experiment two, after preforming the rating and choice task, for each of the 100 previously shown groups of items, subjects were asked to assess the preference similarity for each group of foods. For each group of items, subjects were asked to rate: if someone likes one of the foods, how likely is it that they also similarly like the other foods? Subjects were told to make the rating on a scale from “Not at all likely” to “Very likely”. Subjects used a mouse to rate each item on a scale. The scale appeared to be continuous, and the data was captured with integers ranging from 1 to 100.
+    In Experiment 2 and 3, after preforming the rating and choice task, for each of the 100 previously shown sets, participants were asked to assess the preference similarity for each set. For each set, participants were asked to rate: if someone likes one of the foods, how likely is it that they also similarly like the other foods? Participants were told to make the rating on a scale from “Not at all likely” to “Very likely”. Participants used a mouse to rate each item on a scale. The scale appeared to be continuous, and the data was captured with integers ranging from 1 to 100.
 </details>
 
 <h2>Association Network Construction</h2>
@@ -56,63 +60,6 @@ Preference-based decisions, like choosing what to eat, often depend on associati
     While a range of possible centrality measures is available, people likely do not track or utilize any exact measure of centrality per se but rather the variances reflected by centralities. Furthermore, as the number of centrality measures increases, interpreting each measure in isolation becomes challenging due to issues of multicollinearity and dimensionality. Principal component analysis (PCA) is a statistical technique that can help us understand the importance of any given node rather than relying solely on any single measure of centrality.</br></br>
     PCA linearly transforms input data into an equal number of linearly uncorrelated variables called Principal Components (PCs) that cumulatively account for an additional portion of the remaining data variance (Kambhatla et al., 1997). To reduce the dimensionality of the data, we consider the minimum set of largest PCs, i.e., the principal subspace, that accounts for at least some pre-defined variance threshold (usually in the range of 80%-95% of original data variance) for further analyses.</br></br>
     In our case, by transforming the data into a lower dimensional space, we can facilitate capturing higher-order notions of node importance. Thus, we conducted a PCA to decompose variances in the node metrics into components aligned with network measures. As PC 1 and PC 2 jointly account for more than 80% of the total variances in node parameters under consideration, the PCs act as our network statistic scores for our behavioral analysis. Using the PC scores, we assigned each food item two node importance scores and assessed the effect of node importance by PC 1 and 2 alone or by PCs 1 and 2 combined.</br></br>
-
-</details>
-
-<h2>Regression Tables</h2>
-Here are the corresponding regression tables for each of the figures on the poster.</br></br>
-<details>
-    <summary>Table one</summary>
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-0lax{text-align:left;vertical-align:top}
-</style>
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-0lax">&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;</th>
-    <th class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;color:white">Experiment one</span>&nbsp;&nbsp;&nbsp;</th>
-    <th class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;color:white">Experiment two</span>&nbsp;&nbsp;&nbsp;</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">left&nbsp;&nbsp;&nbsp;liking rating</span>&nbsp;&nbsp;&nbsp;</td>
-    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">0.90***&nbsp;&nbsp;&nbsp;[0.69, 1.11]</span>&nbsp;&nbsp;&nbsp;</td>
-    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">0.79***&nbsp;&nbsp;&nbsp;[0.68, 0.91]</span>&nbsp;&nbsp;&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">right&nbsp;&nbsp;&nbsp;liking rating</span>&nbsp;&nbsp;&nbsp;</td>
-    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">−0.75***&nbsp;&nbsp;&nbsp;[−0.96, −0.55]</span>&nbsp;&nbsp;&nbsp;</td>
-    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">−0.81***&nbsp;&nbsp;&nbsp;[−0.93, −0.70]</span>&nbsp;&nbsp;&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">left&nbsp;&nbsp;&nbsp;network estimate</span>&nbsp;&nbsp;&nbsp;</td>
-    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">0.16**&nbsp;&nbsp;&nbsp;[0.05, 0.26]</span>&nbsp;&nbsp;&nbsp;</td>
-    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">0.11**&nbsp;&nbsp;&nbsp;[0.04, 0.18]</span>&nbsp;&nbsp;&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">right&nbsp;&nbsp;&nbsp;network estimate</span>&nbsp;&nbsp;&nbsp;</td>
-    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">−0.23***&nbsp;&nbsp;&nbsp;[−0.33, −0.13]</span>&nbsp;&nbsp;&nbsp;</td>
-    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">−0.10**&nbsp;&nbsp;&nbsp;[−0.17, −0.03]</span>&nbsp;&nbsp;&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">left&nbsp;&nbsp;&nbsp;rating × network estimate</span>&nbsp;&nbsp;&nbsp;</td>
-    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">0.12*&nbsp;&nbsp;&nbsp;[0.01, 0.23]</span>&nbsp;&nbsp;&nbsp;</td>
-    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">−0.06+&nbsp;&nbsp;&nbsp;[−0.13, 0.01]</span>&nbsp;&nbsp;&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">right&nbsp;&nbsp;&nbsp;rating × network estimate</span>&nbsp;&nbsp;&nbsp;</td>
-    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">0.00&nbsp;&nbsp;&nbsp;[−0.11, 0.10]</span>&nbsp;&nbsp;&nbsp;</td>
-    <td class="tg-0lax">&nbsp;&nbsp;&nbsp;<br><span style="color:black">0.04&nbsp;&nbsp;&nbsp;[−0.03, 0.11]</span>&nbsp;&nbsp;&nbsp;</td>
-  </tr>
-</tbody>
-</table>
-</details>
 
 <h2>References</h2>
 
