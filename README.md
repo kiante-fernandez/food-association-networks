@@ -1,6 +1,9 @@
 <h1>Uncovering the Role of Structural Properties in Food Association Networks</h1>
 <em>Kianté Fernandez<sup>1</sup>, Uma R. Karmarkar<sup>2</sup>, Ian Krajbich<sup>1</sup></em></br>1 Department of Psychology, University of California Los Angeles; 2 Rady School of Management, University of California, San Diego </br> </br>
 
+  <p align="center">**POSTER NUMBER: P1-B-5**</p>
+
+
   <p align="center">Click <a href="SNE_Poster_Fernandez_2023.pdf" target="_blank">here</a> to view the poster.</p>
 
 **Research Question**: How do people choose between menus of options, like when choosing which restaurant to dine in or which store to shop in? Such decisions involve comparing sets of items, whose value may relate to the cohesiveness of their options. A shop with similar items may be more appealing than one with dissimilar items. Thus, a major challenge in testing such questions is identifying similarity. Here, we define similarity as the degree to which items are associated with each other. We study the associations between items using network models, where relations between items (nodes) are represented as connections (edges). In these models, items that fit together are more closely and densely connected. Across two studies, we use network models to understand how individual items relate to each other and how those relations affect choices between sets. </br>
